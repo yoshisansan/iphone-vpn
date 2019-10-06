@@ -1,52 +1,74 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import MainMenu from "./MainMenu"
+import Footer from "./Footer"
+import Sidebar from "./Sidebar"
+import Favicon from "./Favicon"
+import ShareBtn from "./ShareBtn/ShareBtn"
+import { Helmet } from "react-helmet"
 import "./layout.css"
+import "./global.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import styled, {createGlobalStyle} from 'styled-components';
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+const GlobalStyles = createGlobalStyle`
+// padding: 0rem 1rem;
+width: 100%;
 }
+ 
+`
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+const ContentWrapper = styled.div`
+  padding: 3rem 0rem;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  
+  @media screen and (min-width: 0px) and (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+`
 
-export default Layout
+const LayoutWrapper = styled.div`
+  width: 74rem;
+  padding: 3rem 5rem;
+  background-color: #fff;
+  margin: 0 2rem 0 1rem;
+  border-radius: 3rem;
+  @media screen and (min-width: 0px) and (max-width: 900px) {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0;
+  }  
+`
+
+const SidebarSpace = styled.div`
+  @media screen and (min-width: 0px) and (max-width: 900px) {  
+    margin: 2rem 0;
+  }
+
+`
+
+const Layout = ({ children, location }) => (
+  <div>
+    <Helmet><Favicon/></Helmet>
+    <GlobalStyles />
+    <MainMenu />
+      <ContentWrapper>
+        <LayoutWrapper>
+          <p>{location}</p>
+          {children}
+        <ShareBtn />
+        </LayoutWrapper>
+        <SidebarSpace>
+          <Sidebar/>
+        </SidebarSpace>
+      </ContentWrapper>
+    <Footer />
+  </div>
+);
+
+export default Layout;
