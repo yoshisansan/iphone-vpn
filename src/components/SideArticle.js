@@ -32,7 +32,7 @@ const SideArticle = () => {
     {
       allWordpressPost(filter: {
         id: {
-          in: ["e17864bf-81af-5cb4-b3d4-fdefda42707b","0d5fe5bb-c2d6-583f-8170-5be2c41a1f83","0748d16b-3c26-5af3-83a4-2dd62fd5a847","396d82f5-1826-565d-a860-ea837a5e3fe8","2fd5fce7-7314-574e-bc88-94e61e297a5f","b9a4d8d7-6450-598a-90ba-372b8f7281c4"],
+          in: ["07a05e2f-d369-52e7-8e0c-26856ef6c065","03645044-8c05-5727-91a4-63a23a597f49","784d4089-02c8-5d14-b5ec-a1e28841c78b","5087b784-a17c-5746-b315-3e920d374af6","e7ccb856-5cbe-5bbe-9f90-cd7aee71ccbd","dc071667-e31d-5972-96c1-3c0e6859ac8b"],
         }
       })
       {
