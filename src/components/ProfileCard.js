@@ -112,23 +112,23 @@ const ProfileWrapper = styled.div`
 
 const ProfileCard = () => (
   <ProfileWrapper>
-    <div class="profile-upper">
-      <div class="profile-img"></div>
+    <div className="profile-upper">
+      <div className="profile-img"></div>
     </div>
-    <div class="profile">
-      <div class="profile-main">
-        <p class="name">よしいたけ</p>
-        <p class="work">Webサービス系アフィリエイター</p>
+    <div className="profile">
+      <div className="profile-main">
+        <p className="name">よしいたけ</p>
+        <p className="work">Webサービス系アフィリエイター</p>
       </div>
-      <div class="profile-desc">
-        <p class="description">海外ノマド歴５年目、VPN使用歴３年目。</p>
-        <p class="description">海外バイヤー→IT系メディアを運営しながらWebサービス開発。</p>
-        <p class="description">ライフスタイルのブログはBASHOまで</p>
+      <div className="profile-desc">
+        <p className="description">海外ノマド歴５年目、VPN使用歴３年目。</p>
+        <p className="description">海外バイヤー→IT系メディアを運営しながらWebサービス開発。</p>
+        <p className="description">ライフスタイルのブログはBASHOまで</p>
       </div>
     </div>
-    <div class="profile-sns">
+    <div className="profile-sns">
       <span>\ SNSをチェックする /</span>
-      <div class="sns-service">
+      <div className="sns-service">
         <a href="https://twitter.com/akifumiyoshimu">Twitter</a>
       </div>
     </div>

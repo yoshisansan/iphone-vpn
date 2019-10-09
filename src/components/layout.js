@@ -24,6 +24,11 @@ const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   
+  a{
+      font-size: 1.8rem;
+      line-height: 2.9rem;
+      padding: 1.2rem 1.5rem;
+  }
   @media screen and (min-width: 0px) and (max-width: 900px) {
     flex-direction: column;
     width: 100%;

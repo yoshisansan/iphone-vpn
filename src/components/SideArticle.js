@@ -24,6 +24,10 @@ const Article = styled(Link)`
   h4{
     width: 16rem;
     padding: 0.2rem 1rem;
+    @media screen and (min-width: 0px) and (max-width: 900px) {
+      width: 85%;
+      margin: 0 auto;
+    }
   }
 `
 

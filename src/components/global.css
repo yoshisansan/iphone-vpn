@@ -43,3 +43,9 @@ p{
   line-height: 2.9rem;
   padding: 1.2rem 1.5rem;
 }
+a{
+  color: #1a0dab;
+}
+/* cite > a{
+  font-style: normal;
+} */

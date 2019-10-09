@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-
 export default ({pageContext, location}) => {
 
   // パンくず設定
@@ -10,12 +9,18 @@ export default ({pageContext, location}) => {
   pageLocation.pop();
   pageLocation.shift();
   let postScrumble = 'home / ' + pageLocation + ' / ' + (pageContext.title);
-  // const seperate = location.pathname.replace(/\//g,' / ');
+
+  //サムネ画像があるかないか
+    let ThumbImg = (pageContext.featured_media);
+    if(!ThumbImg) {
+      ThumbImg = {source_url: 'null'};
+      console.log(ThumbImg.source_url);
+    }
 
   return(
   <Layout location={postScrumble}>
       <h1 dangerouslySetInnerHTML={{__html: pageContext.title}} />
-      <img src={pageContext.featured_media.source_url} alt={pageContext.title}/>
+      {ThumbImg.source_url !== 'null' && <img src={ThumbImg.source_url} alt={pageContext.id} />}
       <div dangerouslySetInnerHTML={{__html: pageContext.content}} />
   </Layout>
 );
