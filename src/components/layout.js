@@ -37,6 +37,13 @@ const LayoutWrapper = styled.div`
   background-color: #fff;
   margin: 0 2rem 0 1rem;
   border-radius: 3rem;
+  > img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+  }
   @media screen and (min-width: 0px) and (max-width: 900px) {
     margin: 0 auto;
     margin-top: 2rem;

@@ -15,6 +15,7 @@ export default ({pageContext, location}) => {
   return(
   <Layout location={postScrumble}>
       <h1 dangerouslySetInnerHTML={{__html: pageContext.title}} />
+      <img src={pageContext.featured_media.source_url} alt={pageContext.title}/>
       <div dangerouslySetInnerHTML={{__html: pageContext.content}} />
   </Layout>
 );

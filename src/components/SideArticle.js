@@ -22,6 +22,7 @@ const Article = styled(Link)`
   }
 
   h4{
+    width: 16rem;
     padding: 0.2rem 1rem;
   }
 `

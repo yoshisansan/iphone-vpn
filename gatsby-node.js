@@ -81,6 +81,9 @@ exports.createPages = ({ graphql, actions }) => {
                   slug
                   excerpt
                   content
+                  featured_media{
+                    source_url
+                  }
                 }
               }
             }
