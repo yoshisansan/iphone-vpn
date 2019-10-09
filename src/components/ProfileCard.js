@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const ProfileWrapper = styled.div`
   margin-top: 1.8rem;
   width: 28.4rem;
@@ -27,7 +26,7 @@ const ProfileWrapper = styled.div`
     width: 100%;
     height: 18.7rem;
     background-color: #e0e0e0;
-    // background-image: url();
+    background-image: url('https://vpn-smartphone.com/wp-content/uploads/2019/10/upperProfileCardImg.jpg');
     background-size: cover;
   }
 
@@ -41,7 +40,7 @@ const ProfileWrapper = styled.div`
     transform: translate(-50%, 0);
     bottom: -25%;
     background-color: #121212;
-    background-image: url('../images/iphoneVPNprofile.jpg');
+    background-image: url('https://vpn-smartphone.com/wp-content/uploads/2019/10/iphoneVPNprofileImg.jpg');
     background-size: cover;
   }
 
@@ -84,8 +83,8 @@ const ProfileWrapper = styled.div`
 
   .profile-sns{
     background-color: #000;
-    background-image: url('../images/profileBottom');
-    background-size: auto;
+    background-image: url('https://vpn-smartphone.com/wp-content/uploads/2019/10/bottomProfileCard.jpg');
+    background-size: cover;
     padding: 1rem;
     border-radius: 0 0 2.1rem 2.1rem;
   }
@@ -96,6 +95,7 @@ const ProfileWrapper = styled.div`
     font-size: 1.8rem;
     color: #fff;
     font-weight: bold;
+    padding-top: 1rem;
   }
 
   .profile-sns .sns-service{

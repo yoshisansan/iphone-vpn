@@ -64,6 +64,11 @@ const SidebarSpace = styled.div`
 
 `
 
+const Bread = styled.p`
+  font-size: 1.4rem;
+  color: #666;
+`
+
 const Layout = ({ children, location }) => (
   <div>
     <Helmet><Favicon/></Helmet>
@@ -71,7 +76,7 @@ const Layout = ({ children, location }) => (
     <MainMenu />
       <ContentWrapper>
         <LayoutWrapper>
-          <p>{location}</p>
+          <Bread>{location}</Bread>
           {children}
         <ShareBtn />
         </LayoutWrapper>
