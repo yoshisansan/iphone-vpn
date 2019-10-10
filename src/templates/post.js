@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-
+import SEO from '../components/seo'
 export default ({pageContext, location}) => {
 
   // パンくず設定
@@ -18,10 +18,17 @@ export default ({pageContext, location}) => {
     }
 
   return(
-  <Layout location={postScrumble}>
-      <h1 dangerouslySetInnerHTML={{__html: pageContext.title}} />
-      {ThumbImg.source_url !== 'null' && <img src={ThumbImg.source_url} alt={pageContext.id} />}
-      <div dangerouslySetInnerHTML={{__html: pageContext.content}} />
-  </Layout>
+  <div>
+    <SEO 
+    lang = 'ja'
+    title = {pageContext.title}
+    metaDescription = {pageContext.excerpt}
+    />
+    <Layout location={postScrumble}>
+        <h1 dangerouslySetInnerHTML={{__html: pageContext.title}} />
+        {ThumbImg.source_url !== 'null' && <img src={ThumbImg.source_url} alt={pageContext.id} />}
+        <div dangerouslySetInnerHTML={{__html: pageContext.content}} />
+    </Layout>
+  </div>
 );
 }
