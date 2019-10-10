@@ -51,6 +51,10 @@ p{
   line-height: 2.9rem;
   padding: 1.2rem 1.5rem;
 }
+p > strong{
+  font-size: 1.8rem;
+  line-height: 2.9rem;
+}
 a{
   color: #1a0dab;
 }
