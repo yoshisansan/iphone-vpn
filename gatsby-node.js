@@ -28,6 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
                 id
                 slug
                 status
+                excerpt
                 template
                 title
                 content

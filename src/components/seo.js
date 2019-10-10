@@ -1,31 +1,24 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+function SEO({ metaDescription, lang, meta, title }) {
+  // const { site } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //           description
+  //           author
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
 
-  const metaDescription = description || site.siteMetadata.description
+  // const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
@@ -33,7 +26,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      // titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -53,11 +46,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `iPhoneVPN学部`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `インターネット護身術@よしいたけ`,
         },
         {
           name: `twitter:title`,
@@ -73,7 +66,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ja`,
   meta: [],
   description: ``,
 }
