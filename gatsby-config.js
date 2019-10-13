@@ -19,7 +19,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-sitemap',
+    // 'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,7 +29,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
