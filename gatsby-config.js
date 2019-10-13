@@ -23,14 +23,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: config.title,
-        short_name: config.shortName,
-        description: config.description,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'standalone',
-        icon: config.favicon,
+        name: `iPhoneVPN学部`,
+        short_name: `iPhoneVPN`,
+        start_url: `/home`,
+        background_color: `#fff`,
+        theme_color: `#000`,
+        display: `minimal-ui`,
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
