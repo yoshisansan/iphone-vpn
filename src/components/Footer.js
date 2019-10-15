@@ -87,7 +87,7 @@ const Footer = () => (
         </LogoArea>
         <MenuWrapper>
             {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
-              <MenuItem to={`post/${item.object_slug}`} key={item.title}>
+              <MenuItem to={`/post/${item.object_slug}`} key={item.title}>
                 {item.title}
               </MenuItem>
             ))}
