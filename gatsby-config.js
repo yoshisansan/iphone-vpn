@@ -25,7 +25,7 @@ module.exports = {
       options: {
         name: `iPhoneVPN学部`,
         short_name: `iPhoneVPN`,
-        start_url: `/home`,
+        start_url: `/`,
         background_color: `#fff`,
         theme_color: `#000`,
         display: `minimal-ui`,
