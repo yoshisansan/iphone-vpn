@@ -17,7 +17,7 @@ const Logo = () => (
     }
   }
   `} render={props => (
-    <Link to="home"><img src={props.allWordpressWpLogo.edges[0].node.url.source_url} alt="iPhoneVPN学部"/></Link>
+    <Link to="/home"><img src={props.allWordpressWpLogo.edges[0].node.url.source_url} alt="iPhoneVPN学部"/></Link>
   )} />
 );
 
