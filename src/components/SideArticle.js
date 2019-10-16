@@ -48,7 +48,7 @@ const SideArticle = () => {
           source_url
           localFile {
             childImageSharp {
-              fixed(width: 260) {
+              fixed(width: 220) {
                 base64
                 tracedSVG
                 aspectRatio
