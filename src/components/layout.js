@@ -69,7 +69,7 @@ const Bread = styled.p`
   color: #666;
 `
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children, location, title, locateLink }) => (
   <div>
     <Helmet><Favicon/></Helmet>
     <GlobalStyles />
@@ -78,7 +78,7 @@ const Layout = ({ children, location }) => (
         <LayoutWrapper>
           <Bread>{location}</Bread>
           {children}
-        <ShareBtn />
+        <ShareBtn locateLink={locateLink} title={title}/>
         </LayoutWrapper>
         <SidebarSpace>
           <Sidebar/>

@@ -5,7 +5,6 @@ export default ({pageContext, location}) => {
 
   // パンくず設定
   let pageLocation = location.pathname.split('/');
-  console.log(pageLocation);
   pageLocation.pop();
   pageLocation.shift();
   let postScrumble = 'home / ' + pageLocation + ' / ' + (pageContext.title);
@@ -14,7 +13,6 @@ export default ({pageContext, location}) => {
     let ThumbImg = (pageContext.featured_media);
     if(!ThumbImg) {
       ThumbImg = {source_url: 'null'};
-      console.log(ThumbImg.source_url);
     }
 
   return(
@@ -24,7 +22,7 @@ export default ({pageContext, location}) => {
     title = {pageContext.title}
     metaDescription = {pageContext.excerpt}
     />
-    <Layout location={postScrumble}>
+    <Layout location={postScrumble} title={pageContext.title} locateLink={pageContext.link}>
         <h1 dangerouslySetInnerHTML={{__html: pageContext.title}} />
         {ThumbImg.source_url !== 'null' && <img src={ThumbImg.source_url} alt={pageContext.id} />}
         <div dangerouslySetInnerHTML={{__html: pageContext.content}} />

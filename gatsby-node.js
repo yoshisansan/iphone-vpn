@@ -3,20 +3,10 @@ const Promise = require(`bluebird`)
 const path = require(`path`)
 const slash = require(`slash`)
  
-// Implement the Gatsby API “createPages”. This is
-// called after the Gatsby bootstrap is finished so you have
-// access to any information necessary to programmatically
-// create pages.
-// Will create pages for WordPress pages (route : /{slug})
-// Will create pages for WordPress posts (route : /post/{slug})
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
   createRedirect({ fromPath:'/', toPath: '/home', redirectInBrowser: true, isParmanent: true})
   return new Promise((resolve, reject) => {
-    // The “graphql” function allows us to run arbitrary
-    // queries against the local WordPress graphql schema. Think of
-    // it like the site has a built-in database constructed
-    // from the fetched data that you can run queries against.
  
     // ==== PAGES (WORDPRESS NATIVE) ====
     graphql(
@@ -33,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 content
                 template
+                link
               }
             }
           }
@@ -82,6 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
                   slug
                   excerpt
                   content
+                  link
                   featured_media{
                     source_url
                   }

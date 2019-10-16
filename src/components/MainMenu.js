@@ -1,7 +1,6 @@
 import React from 'react'
 import {graphql, StaticQuery, Link} from 'gatsby'
 import styled from 'styled-components'
-// import SiteInfo from './SiteInfo';
 import Logo from './Logo';
 
 const LogoArea = styled.div`
