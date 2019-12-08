@@ -30,15 +30,15 @@ const Article = styled(Link)`
     }
   }
 `
-
+// allWordpressPost (filter: {
+//   id: {
+//     in: ["07a05e2f-d369-52e7-8e0c-26856ef6c065","03645044-8c05-5727-91a4-63a23a597f49","784d4089-02c8-5d14-b5ec-a1e28841c78b","5087b784-a17c-5746-b315-3e920d374af6","e7ccb856-5cbe-5bbe-9f90-cd7aee71ccbd","dc071667-e31d-5972-96c1-3c0e6859ac8b"],
+//   }}){
 const SideArticle = () => {
   return (
     <StaticQuery query={graphql`
   {
-  allWordpressPost (filter: {
-    id: {
-      in: ["07a05e2f-d369-52e7-8e0c-26856ef6c065","03645044-8c05-5727-91a4-63a23a597f49","784d4089-02c8-5d14-b5ec-a1e28841c78b","5087b784-a17c-5746-b315-3e920d374af6","e7ccb856-5cbe-5bbe-9f90-cd7aee71ccbd","dc071667-e31d-5972-96c1-3c0e6859ac8b"],
-    }}){
+  allWordpressPost{
     edges {
       node {
         id
